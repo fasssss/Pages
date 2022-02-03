@@ -639,8 +639,8 @@ class ListPageComponent {
     }
     formDisplayList() {
         this.displayHeroList = this.heroesList.filter(hero => { var _a; return (_a = hero.name) === null || _a === void 0 ? void 0 : _a.startsWith(this.searchFilter); });
-        let showStart = this.displayHeroList.length / this.pageCapacity * this.currentPage;
-        this.displayHeroList = this.displayHeroList.slice(showStart - 1, showStart + this.pageCapacity - 1);
+        let showStart = this.displayHeroList.length / this.pageCapacity * (this.currentPage - 1);
+        this.displayHeroList = this.displayHeroList.slice(showStart, showStart + this.pageCapacity);
     }
 }
 ListPageComponent.ɵfac = function ListPageComponent_Factory(t) { return new (t || ListPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_3__.MatDialog), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_4__.Store), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__.Router)); };
